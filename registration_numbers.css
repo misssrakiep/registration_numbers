@@ -1,0 +1,55 @@
+body{
+  padding: 0;
+  margin: 0;
+  background: url("http://media.caranddriver.com/images/media/51/ford-maverick-grabber-inline-678-photo-569014-s-original.jpg") center no-repeat; background-attachment: fixed;
+}
+.container{
+  width: 100%;
+}
+header{
+  background-color: grey;
+  clear: left;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  align: top;
+}
+/*footer{
+  padding: 1em;
+  background-color: grey;
+  text-align: center;
+  float: inherit;
+  margin: 0;
+  padding: 0;
+  align: bottom;
+}*/
+
+nav{
+  border-style: solid;
+  border-color: black;
+  max-width: 50%;
+
+}
+aside{
+  border-style: solid;
+  border-color: black;
+  max-width: 50%;
+}
+h1{
+  font-size: 65px;
+  color: white;
+font-family: Purisa, fantasy;
+}
+footer{
+  font-size:40 px;
+  color: white;
+font-family: Purisa, fantasy;
+}
+.numPlate{
+  border-style: 1px solid;
+  border-color: black;
+  border-radius: 5%
+  max-width: 100px;
+  max-height: 20px;
+  background-color: silver;
+}
