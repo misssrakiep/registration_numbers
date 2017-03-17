@@ -4,44 +4,33 @@ var display = document.getElementById("display");
 var cptBtn = document.getElementById("capeTown");
 var paarlBtn = document.getElementById("paarl");
 var stelliesBtn = document.getElementById("stellenbosch");
-var welliesBtn = document.getElementById("wellington");
-var worcesterBtn =document.getElementById("worcester");
-var bellvilleBtn =document.getElementById("bellville");
-
-cptBtn.addEventListener("click", function(){
-  Display();
- });
-paarlBtn.addEventListener("click", function(){
-  show();
-});
-stelliesBtn.addEventListener("click", function(){
-  make();
-});
-welliesBtn.addEventListener("click", function(){
-  create();
- });
- worcesterBtn.addEventListener("click", function(){
-  give();
-});
-bellvilleBtn.addEventListener("click", function(){
-  offer();
-});
+var bellvilleBtn = document.getElementById("bellville");
+var regNum = document.getElementById("regNum"); //input
+var makePlate = document.getElementById("makePlate") //button
 
 makePlate.addEventListener('click', function generate(){
-  var regNum = document.getElementById("regNum"); //input
-  var makePlate = document.getElementById("makePlate") //button
+
   var registration = document.getElementById("regNum").value;
   var list = document.querySelector('.list');
 
-if (registration.length > 0) {
+  var regValue = registration.toUpperCase();
+
+  if (registration.length > 0) {
     var li = document.createElement('li');
     li.innerHTML = regNum.value;
     li.setAttribute('id', 'cool');
     list.appendChild(li);
-    regNumbers.push(registration);
-}
+    regNumbers.push(regValue);
+  }
 });
+
+cptBtn.addEventListener("click", function(){
+  //console.log(regNumbers);
+  Display();
+});
+
 function Display() {
+  display.innerHTML = "";
   for (var i =0;i < regNumbers.length;i++) {
     if (regNumbers[i].startsWith('CA')) {
       box.push(regNumbers[i]);
@@ -50,9 +39,16 @@ function Display() {
       li.setAttribute("id", "vetkop");
       display.appendChild(li);
   }
-}};
+};
+
+paarlBtn.addEventListener("click", function(){
+  show();
+});
+
 
 function show(){
+  display.innerHTML = "";
+
   for (var i =0;i < regNumbers.length;i++) {
     if (regNumbers[i].startsWith('CJ')) {
       box.push(regNumbers[i]);
@@ -64,9 +60,16 @@ function show(){
   }
 };
 
+stelliesBtn.addEventListener("click", function(){
+  make();
+});
+
+
+
+
 function make(){
   for (var i =0;i < regNumbers.length;i++){
-    if (regNumbers[i].startsWith('CL')) {
+    if (regNumbers[i].startsWith('CY')) {
       box.push(regNumbers[i]);
       var li = document.createElement("li");
       li.innerHTML = box[i];
@@ -74,9 +77,13 @@ function make(){
       display.appendChild(li);
     }
   }
-}
+};
 
-  function create(){
+bellvilleBtn.addEventListener("click", function(){
+  offer();
+});
+
+  function offer(){
     for (var i =0;i < regNumbers.length;i++){
       if (regNumbers[i].startsWith('CN')) {
         box.push(regNumbers[i]);
@@ -85,29 +92,5 @@ function make(){
         li.setAttribute("id", "vetkop");
         display.appendChild(li);
       }
-    }
-  };
-
-  function give(){
-  for (var i =0;i < regNumbers.length;i++){
-    if (regNumbers[i].startsWith('CW')) {
-      box.push(regNumbers[i]);
-      var li = document.createElement("li");
-      li.innerHTML = box[i];
-      li.setAttribute("id", "vetkop");
-      display.appendChild(li);
-    }
-  }
-  }
-
-  function offer(){
-  for (var i =0;i < regNumbers.length;i++){
-    if (regNumbers[i].startsWith('CL')) {
-      box.push(regNumbers[i]);
-      var li = document.createElement("li");
-      li.innerHTML = box[i];
-      li.setAttribute("id", "vetkop");
-      display.appendChild(li);
-    }
-  }
-  }
+      }
+  }};

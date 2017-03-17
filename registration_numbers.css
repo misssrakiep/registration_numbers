@@ -1,39 +1,23 @@
 body{
   padding: 0;
   margin: 0;
-  background: url("http://media.caranddriver.com/images/media/51/ford-maverick-grabber-inline-678-photo-569014-s-original.jpg") center no-repeat; background-attachment: fixed;
+  background-color: #96C7D9;
 }
 .container{
   width: 100%;
 }
 header{
+  border: 2px solid white;
   background-color: grey;
   clear: left;
   text-align: center;
   margin: 0;
   padding: 0;
   align: top;
-}
-/*footer{
-  padding: 1em;
-  background-color: grey;
+  font-size: 65px;
+  font-family: Purisa, fantasy;
   text-align: center;
-  float: inherit;
-  margin: 0;
-  padding: 0;
-  align: bottom;
-}*/
-
-nav{
-  border-style: solid;
-  border-color: black;
-  max-width: 50%;
-
-}
-aside{
-  border-style: solid;
-  border-color: black;
-  max-width: 50%;
+  font-weight: bold;
 }
 h1{
   font-size: 65px;
@@ -45,11 +29,53 @@ footer{
   color: white;
 font-family: Purisa, fantasy;
 }
-.numPlate{
-  border-style: 1px solid;
-  border-color: black;
-  border-radius: 5%
-  max-width: 100px;
-  max-height: 20px;
+
+#capeTown, #paarl, #stellenbosch, #bellville{
+width: 200px;
+height: 35px;
+background-color: #5A8594;
+color: white;
+font-size: 15px;
+font-family: Purisa, fantasy;
+
+}
+#regNum{
+  width: 250px;
+}
+table{
+  width: 100%;
+}
+th{
+  font-family: Purisa, fantasy;
+  color: white;
+  font-weight: bold;
+  font-size: 35px;
+}
+li{
+  border: 1px solid black;
+  border-radius: 5%;
+  width: 100px;
+  height: 20px;
   background-color: silver;
+  text-transform: uppercase;
+  list-style: none;
+}
+.list {
+  border: 1px solid black;
+  border-radius: 5%;
+  width: 100px;
+  height: 20px;
+  background-color: silver;
+  text-transform: uppercase;
+  list-style: none;
+}
+
+ #display {
+  border: 1px solid black;
+  border-radius: 5%;
+  width: 100px;
+  height: 20px;
+  background-color: silver;
+  text-transform: uppercase;
+  list-style: none;
 }
